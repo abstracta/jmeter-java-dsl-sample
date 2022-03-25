@@ -17,7 +17,7 @@
     <dependency>
       <groupId>us.abstracta.jmeter</groupId>
       <artifactId>jmeter-java-dsl</artifactId>
-      <version>0.50</version>
+      <version>0.51</version>
       <scope>test</scope>
     </dependency>
     <dependency>
