@@ -8,15 +8,14 @@ import java.time.Duration;
 import org.junit.jupiter.api.Test;
 import us.abstracta.jmeter.javadsl.core.TestPlanStats;
 
-public class PerformanceTest {
+class PerformanceTest {
 
   @Test
-  public void testPerformance() throws IOException {
+  void testPerformance() throws IOException {
     TestPlanStats stats = testPlan(
-        threadGroup(1, 1,
-            httpSampler("https://myservice")
-        )
-    ).run();
+        threadGroup(5, 3,
+            httpSampler("https://myservice")))
+        .run();
     assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofSeconds(5));
   }
 
