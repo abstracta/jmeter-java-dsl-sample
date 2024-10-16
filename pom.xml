@@ -11,6 +11,7 @@
   <properties>
     <!-- using Java 11 instead of 17 since is the latest LTS JMeter has support for -->
     <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <build>
